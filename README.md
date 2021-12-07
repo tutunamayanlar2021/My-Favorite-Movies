@@ -1,2 +1,2 @@
-# My-Favorite-Movies
+# My Favorite Movies
 web programming project
