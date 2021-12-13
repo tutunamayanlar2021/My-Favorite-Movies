@@ -26,8 +26,15 @@ using OrnekPro.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\AYJiPO\source\repos\OrnekPro\OrnekPro\Views\_ViewImports.cshtml"
+using OrnekPro.Entity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e0af86a39f4778ba7df2c541167dc7572b2a6b2b", @"/Views/Shared/_movie.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"156062d02a28a6ba0f6c126086a89e1d0a2bb8c5", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ccd26d39bc1a2a8c0ce23398f52764c0579a75f5", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__movie : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Movie>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("card-img"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,7 +75,7 @@ using OrnekPro.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n    <div class=\"card mb-3 \" >\r\n        <div class=\"row no-gutters\">\r\n            <div class=\"col-md-3\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b6846", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b7023", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -109,7 +116,7 @@ AddHtmlAttributeValue("", 192, Model.Description, 192, 18, false);
 #line hidden
 #nullable disable
             WriteLiteral("</h5>\r\n                    <div>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b9314", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b9491", async() => {
                 WriteLiteral("details");
             }
             );
@@ -143,7 +150,7 @@ AddHtmlAttributeValue("", 192, Model.Description, 192, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b11838", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b12015", async() => {
                 WriteLiteral("edit");
             }
             );
@@ -177,7 +184,7 @@ AddHtmlAttributeValue("", 192, Model.Description, 192, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        \r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b14387", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0af86a39f4778ba7df2c541167dc7572b2a6b2b14564", async() => {
                 WriteLiteral("\r\n                            <input type=\"hidden\" name=\"MovieId\"");
                 BeginWriteAttribute("value", " value=\"", 881, "\"", 903, 1);
 #nullable restore

@@ -26,8 +26,15 @@ using OrnekPro.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\AYJiPO\source\repos\OrnekPro\OrnekPro\Views\_ViewImports.cshtml"
+using OrnekPro.Entity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4365df89fbd78653311e29564718c47e56664f25", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"156062d02a28a6ba0f6c126086a89e1d0a2bb8c5", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ccd26d39bc1a2a8c0ce23398f52764c0579a75f5", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -56,7 +63,7 @@ using OrnekPro.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4365df89fbd78653311e29564718c47e56664f253241", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4365df89fbd78653311e29564718c47e56664f253418", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
 #nullable restore
 #line 5 "C:\Users\AYJiPO\source\repos\OrnekPro\OrnekPro\Views\Shared\_Layout.cshtml"
@@ -81,7 +88,7 @@ using OrnekPro.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4365df89fbd78653311e29564718c47e56664f254794", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4365df89fbd78653311e29564718c47e56664f254971", async() => {
                 WriteLiteral("\r\n    ");
 #nullable restore
 #line 10 "C:\Users\AYJiPO\source\repos\OrnekPro\OrnekPro\Views\Shared\_Layout.cshtml"

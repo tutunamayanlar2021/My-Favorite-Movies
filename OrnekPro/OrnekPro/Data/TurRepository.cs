@@ -1,4 +1,5 @@
-﻿using OrnekPro.Models;
+﻿using OrnekPro.Entity;
+using OrnekPro.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

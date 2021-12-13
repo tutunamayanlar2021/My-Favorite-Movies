@@ -10,10 +10,16 @@ namespace OrnekPro.ViewComponent
 {
     public class TurlerViewComponent: Microsoft.AspNetCore.Mvc.ViewComponent
     {
+        private readonly MovieContext _context;
+        public TurlerViewComponent(MovieContext context)
+        {
+            _context = context;
+        }
+
         public IViewComponentResult Invoke()
         {
             ViewBag.SelectedTur = RouteData.Values["id"];
-            return View (TurRepository.Turler);
+            return View (_context.Turler.ToList());
         }
        
     }

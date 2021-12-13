@@ -1,4 +1,5 @@
-﻿using OrnekPro.Models;
+﻿using OrnekPro.Entity;
+using OrnekPro.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace OrnekPro.Data
         Title="Jiu Jitsu",
         Description="Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.",
         Director="Dimitri Logothetis",
-        Player=new string[] { "Nicolas Cage", "Alain Moussi"},
+      
         ImageUrl="1_.jpeg",
         TurId=1
     },
@@ -27,7 +28,7 @@ namespace OrnekPro.Data
         Title="Fatman",
         Description="A rowdy, unorthodox Santa Claus is fighting to save his declining business. Meanwhile, Billy, a neglected and precocious 12 year old, hires a hit m...",
         Director="Eshom Nelms",
-        Player=new string[] { "Mel Gibson", "Walton Goggins","Michelle Lan"},
+       
         ImageUrl="revelant.jpg",
         TurId=1
     },
@@ -36,7 +37,7 @@ namespace OrnekPro.Data
         Title="The Dalton Gang",
         Description="When their brother Frank is killed by an outlaw, brothers Bob Dalton, Emmett Dalton and Gray Dalton join their local sheriff's department. When the...",
         Director="Christopher Forbes",
-        Player=new string[] { "oyuncu 1","oyuncu 2"},
+       
         ImageUrl="k.jpg",
         TurId=3
     },
@@ -45,7 +46,7 @@ namespace OrnekPro.Data
         Title="Tenet",
         Description="Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of internat...",
         Director="Christopher Nolan",
-        Player=new string[] { "Robert Pattinson", "Elizabeth Debicki"},
+      
         ImageUrl="revelant.jpg",
         TurId=3
     },
@@ -54,7 +55,7 @@ namespace OrnekPro.Data
         Title="The Craft: Legacy",
         Description="An eclectic foursome of aspiring teenage witches get more than they bargained for as they lean into their newfound powers.",
         Director="Zoe Lister-Jones",
-        Player=new string[] { "Cailee Spaeny", "Zoey Luna"},
+      
         ImageUrl="1_.jpeg",
        TurId=3
     },
@@ -63,7 +64,7 @@ namespace OrnekPro.Data
         Title="Hard Kill",
         Description="The work of billionaire tech CEO Donovan Chalmers is so valuable that he hires mercenaries to protect it, and a terrorist group kidnaps his daughte...",
         Director="Matt Eskandari",
-        Player=new string[] { "Bruce Willis", "Jesse Metcalfe"},
+      
         ImageUrl="1_.jpeg",
         TurId=4
     }

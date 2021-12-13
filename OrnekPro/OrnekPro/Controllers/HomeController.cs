@@ -12,18 +12,23 @@ namespace OrnekPro.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+     //  private readonly ILogger<HomeController> _logger;
+        private readonly MovieContext _context;
+        public HomeController(MovieContext context)
+        {
+            _context = context;
+        }
 
-        public HomeController(ILogger<HomeController> logger)
+      /*public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-        }
+        }*/
 
         public IActionResult Index()
         {
             var model = new HomePageViewModel
             {
-                PopularMovies = MovieRepository.Movies
+                PopularMovies = _context.Movies.ToList()
             };
         
             return View(model);

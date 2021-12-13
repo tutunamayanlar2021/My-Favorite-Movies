@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OrnekPro.Data;
+using OrnekPro.Entity;
 using OrnekPro.Models;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,13 @@ namespace OrnekPro.Controllers
 {
     public class MoviesController : Controller
     {
-      
+        private readonly MovieContext _context;
+        public MoviesController(MovieContext context)
+        {
+            _context = context;
+        }
 
-        //localhost:5000/movies
 
-        //localhost:5000/movies
         public IActionResult Index()
         {
            
@@ -23,22 +26,23 @@ namespace OrnekPro.Controllers
         }
         public IActionResult List(int ?id,string q)  
         {
-           // var kelime = HttpContext.Request.Query["q"].ToString();
-            var movies = MovieRepository.Movies;
+
+            //var movies = MovieRepository.Movies;
+            var movies = _context.Movies.AsQueryable();
             if(id != null)
             {
-                movies = movies.Where(m => m.TurId==id).ToList();
+                movies = movies.Where(m => m.TurId==id);
             }
             if (!string.IsNullOrEmpty(q))
             {
                 movies = movies.Where(i => 
                 i.Title.ToLower().Contains(q.ToLower())||
-                i.Description.ToLower().Contains(q.ToLower())).ToList();
+                i.Description.ToLower().Contains(q.ToLower()));
             }
-           
+
             var model = new MoviesViewModel()
             {
-                Movie = movies
+                Movie = movies.ToList()
                
 
             };
@@ -47,37 +51,47 @@ namespace OrnekPro.Controllers
         }
         public IActionResult Details(int id)
         {
-            return View(MovieRepository.GetById(id));
+            return View(_context.Movies.Find(id));
         }
        
         public IActionResult Edit(int id)
         {
             ViewBag.Turler = new SelectList (TurRepository.Turler,"TurId","Name");
-            return View(MovieRepository.GetById(id));
+            return View(_context.Movies.Find(id));
         }
         [HttpPost]
         public IActionResult Edit(Movie m)
         {
             if (ModelState.IsValid)
             {
-                MovieRepository.Edit(m);
+                //  MovieRepository.Edit(m);
+                _context.Movies.Update(m);
+                _context.SaveChanges();
                 return RedirectToAction("Details", "Movies", new { @id = m.MovieId });
             }
-            ViewBag.Turler = new SelectList(TurRepository.Turler, "TurId", "Name");
+            ViewBag.Turler = new SelectList(_context.Turler, "TurId", "Name");
             return View(m);
         }
         public IActionResult Create()
         {
-            ViewBag.Turler = new SelectList(TurRepository.Turler, "TurId", "Name");
+            ViewBag.Turler = new SelectList(_context.Turler, "TurId", "Name");
             return View();
 
         }
+        
+
+      
         [HttpPost]
+       
+        
         public IActionResult Create(Movie m)
         {
             if (ModelState.IsValid)
             {
-                MovieRepository.Add(m);
+               
+                _context.Movies.Add(m);
+                _context.SaveChanges();
+               
                 return RedirectToAction("List");
             }
             ViewBag.Turler = new SelectList(TurRepository.Turler, "TurId", "Name");
@@ -87,7 +101,9 @@ namespace OrnekPro.Controllers
         [HttpPost]
         public IActionResult Delete(int MovieId)
         {
-            MovieRepository.Delete(MovieId);
+            var thing = _context.Movies.Find(MovieId);
+            _context.Movies.Remove(thing);
+            _context.SaveChanges();
             return RedirectToAction("List");
         }
 
