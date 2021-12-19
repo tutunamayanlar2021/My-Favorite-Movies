@@ -1,0 +1,22 @@
+﻿@model HomePageViewModel
+
+@section header{
+
+
+    @await Html.PartialAsync("_header")
+
+}
+@section scripts{
+    <script src="~/js/script.js"></script>
+}
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+   
+
+<h1>@localizer["Filmler"]</h1>
+<div id="Filmler">
+    @foreach (var movie in Model.PopularMovies)
+    {
+      @await Html.PartialAsync("_movie", movie)
+    }
+
+</div>

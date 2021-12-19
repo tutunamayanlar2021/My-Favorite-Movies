@@ -1,0 +1,11 @@
+﻿@model List<Tur>
+
+<div>
+    <ul class="list-group">
+        @foreach (var tur in Model)
+        {
+            <li class="list-group-item list-group-item-dark">@tur.Name</li>
+        }
+
+    </ul>
+</div>
