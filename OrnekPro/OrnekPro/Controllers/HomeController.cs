@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Logging;
 using OrnekPro.Data;
 using OrnekPro.Models;
@@ -11,21 +14,26 @@ using System.Threading.Tasks;
 namespace OrnekPro.Controllers
 {
     public class HomeController : Controller
-    {
-     //  private readonly ILogger<HomeController> _logger;
+    {   private readonly IHtmlLocalizer<HomeController> _localizer;
+      //private readonly ILogger<HomeController> _logger;
+     //DI
         private readonly MovieContext _context;
-        public HomeController(MovieContext context)
+        public HomeController(MovieContext context, IHtmlLocalizer<HomeController> localizer)
         {
             _context = context;
+            _localizer = localizer;
         }
 
-      /*public HomeController(ILogger<HomeController> logger)
+    /*  public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+          //  _logger = logger;
+            
         }*/
 
         public IActionResult Index()
         {
+            var test = _localizer["film listesi"];
+            ViewData["film listesi"] = test;
             var model = new HomePageViewModel
             {
                 PopularMovies = _context.Movies.ToList()
@@ -49,6 +57,18 @@ namespace OrnekPro.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        
+        [HttpPost]
+        public IActionResult CultureManagment(string culture,string url)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions {Expires = DateTimeOffset.Now.AddDays(10)}) ;
+            return LocalRedirect(url);
+            
+           
         }
     }
 }

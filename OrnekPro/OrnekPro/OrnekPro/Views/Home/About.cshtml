@@ -1,9 +1,0 @@
-﻿@model List<Tur>
- 
-<p>HOME/ABOUT</p>
-
-@section list{
-    @*@await Html.PartialAsync("_list",Model)*@
-    @*@await Html.PartialAsync("_list", Model)*@
-    @await Component.InvokeAsync("Turler")
-}
