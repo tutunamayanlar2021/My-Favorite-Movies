@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="detay" xml:space="preserve">
+    <value>detail</value>
+  </data>
+  <data name="Film Bulunamadı" xml:space="preserve">
+    <value>Movie not Found</value>
+  </data>
   <data name="Film Listesi" xml:space="preserve">
     <value>Movie List</value>
+  </data>
+  <data name="Macera" xml:space="preserve">
+    <value>Macera eng</value>
   </data>
 </root>

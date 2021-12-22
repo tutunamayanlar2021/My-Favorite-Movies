@@ -117,7 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Create Movie" xml:space="preserve">
+    <value>Create Movie</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="detay" xml:space="preserve">
+    <value>detail</value>
+  </data>
+  <data name="Director" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="düzenle" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="Film Bulunamadı" xml:space="preserve">
+    <value>Movie not Found</value>
+  </data>
+  <data name="Film Listesi" xml:space="preserve">
+    <value>Movie List</value>
+  </data>
+  <data name="Film Oluştur" xml:space="preserve">
+    <value>Create Movie</value>
+  </data>
   <data name="Filmler" xml:space="preserve">
     <value>Movies</value>
+  </data>
+  <data name="Filmlerim" xml:space="preserve">
+    <value>My Movies</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Image Name</value>
+  </data>
+  <data name="Kategori boş geçilemez" xml:space="preserve">
+    <value>la categoría no puede estar vacía!</value>
+  </data>
+  <data name="Macera" xml:space="preserve">
+    <value>Adventure</value>
+  </data>
+  <data name="Seçiniz" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="sil" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="title boş geçilemez" xml:space="preserve">
+    <value>el título no puede estar vacío!</value>
+  </data>
+  <data name="TurId" xml:space="preserve">
+    <value>Category</value>
   </data>
 </root>

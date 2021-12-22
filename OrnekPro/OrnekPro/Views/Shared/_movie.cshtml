@@ -9,12 +9,12 @@
                 <div class="card-body">
                     <h5 class="card-title">@Model.Title</h5>
                     <div>
-                        <a class=" btn btn-success" asp-Controller ="Movies"asp-action ="Details" asp-route-id="@Model.MovieId">details</a>
-                        <a class=" btn btn-secondary" asp-Controller ="Movies"asp-action ="Edit" asp-route-id="@Model.MovieId">edit</a>
+                        <a class=" btn btn-success" asp-Controller ="Movies"asp-action ="Details" asp-route-id="@Model.MovieId">@localizer["detay"]</a>
+                        <a class=" btn btn-secondary" asp-Controller="Movies" asp-action="Edit" asp-route-id="@Model.MovieId">@localizer["düzenle"]</a>
                         
                         <form asp-controller="Movies" asp-action="Delete" method="post" style=" display:inline">
                             <input type="hidden" name="MovieId" value="@Model.MovieId" />
-                            <button type="submit" class=" btn btn-danger"> Delete</button>
+                            <button type="submit" class=" btn btn-danger">@localizer["sil"]</button>
                         </form>
                     </div>
                 </div>

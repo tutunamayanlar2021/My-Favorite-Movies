@@ -120,4 +120,7 @@
   <data name="Film Listesi" xml:space="preserve">
     <value>film listesi! eng</value>
   </data>
+  <data name="Tüm Filmler" xml:space="preserve">
+    <value>Todas Las Películas</value>
+  </data>
 </root>

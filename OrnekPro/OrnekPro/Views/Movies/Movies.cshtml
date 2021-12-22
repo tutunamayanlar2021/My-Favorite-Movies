@@ -1,6 +1,4 @@
 ﻿@model MoviesViewModel
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
-
 
 <h1>
     @localizer["Film Listesi"]
@@ -8,6 +6,7 @@
 
 
 <div id="Filmler">
+
     @if (Model.Movie.Count > 0)
     {
         @foreach (var movie in Model.Movie)
@@ -18,7 +17,7 @@
     }
     else
     {
-        <div class="  alet alert-danger">Film Bulunamadı</div>
+        <div class="  alet alert-danger">@localizer["Film Bulunamadı"] </div>
     }
 
     @section list{
@@ -26,6 +25,7 @@
         @*@await Html.PartialAsync("_list",Model.Turler)*@
         @await Component.InvokeAsync("Turler")
     }
+
 
 </div>
 

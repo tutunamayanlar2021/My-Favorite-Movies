@@ -4,13 +4,13 @@
             <span class="navbar-toggler-icon"> </span>
         </button>
         <div class="collapse navbar-collapse" id=" navbarToggler">
-            <a href="/" class=" navbar-brand">MovieApp</a>
+            <a href="/" class=" navbar-brand">@localizer["Filmlerim"]</a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a href="/movies/list" class="nav-link">Movies</a>
+                    <a href="/movies/list" class="nav-link">@localizer["Filmler"]</a>
                 </li>
                 <li class="nav-item ">
-                    <a href="/movies/create" class="nav-link">Create Movie</a>
+                    <a href="/movies/create" class="nav-link">@localizer["Film Oluştur"]</a>
                 </li>
                 <li class=" nav-link">
                      <partial name="_Culture" />
@@ -19,8 +19,8 @@
 
         </div>
         <form action="/movies/list" class="form-inline my-2 my-lg-0 " method="get">
-            <input class="form-control mr-sm-2" name ="q"type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" name ="q"type="search" placeholder="@localizer["Search"]" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">@localizer["Search"]</button>
         </form>
     </div>
 </nav>

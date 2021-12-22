@@ -11,14 +11,15 @@ namespace OrnekPro.Entity
     public class Movie
     {
         public int MovieId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "title boş geçilemez")]
         [MaxLength(500)]
         public string Title { get; set; }
         public string Description { get; set; }
         public string Director { get; set; }
         public string ImageUrl { get; set; }
 
-        [Required]
+        
+        [Required(ErrorMessage = "Kategori boş geçilemez")]
         public int? TurId { get; set; }
     }
 }

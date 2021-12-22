@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Film Listesi" xml:space="preserve">
-    <value>film listesi! eng</value>
+  <data name="detay" xml:space="preserve">
+    <value>detalle</value>
+  </data>
+  <data name="düzenle" xml:space="preserve">
+    <value>editar</value>
+  </data>
+  <data name="Film Bulunamadı" xml:space="preserve">
+    <value>Película no Encontrada</value>
+  </data>
+  <data name="Film Listesi1" xml:space="preserve">
+    <value>Lista de Películas</value>
+  </data>
+  <data name="Macera" xml:space="preserve">
+    <value>Aventuras</value>
+  </data>
+  <data name="sil" xml:space="preserve">
+    <value>eliminar</value>
   </data>
 </root>

@@ -60,6 +60,7 @@ namespace OrnekPro
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                StaticMovies.theOriginals(app);
             }
             else
             {
@@ -76,12 +77,7 @@ namespace OrnekPro
                 .Value);
 
             
-            //var dil_destegi = new[] {"tr", "en", "fr", "es" };
-            //var varsayýlan_dil = new RequestLocalizationOptions()
-            //    .SetDefaultCulture(dil_destegi[0])
-            //    .AddSupportedCultures(dil_destegi)
-            //    .AddSupportedUICultures(dil_destegi);
-            //app.UseRequestLocalization(dil_destegi);
+        
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
