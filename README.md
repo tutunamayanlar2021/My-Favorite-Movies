@@ -1,6 +1,4 @@
-# My Favorite Movies
-
-###uygulamada uygulma
+# Filmlerim
 
 
-dil desteği 
+
