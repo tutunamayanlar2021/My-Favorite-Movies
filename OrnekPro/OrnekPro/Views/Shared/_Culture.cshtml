@@ -1,0 +1,26 @@
+﻿
+@{
+    var culture = Context.Features.Get<IRequestCultureFeature>();
+
+    var cultureList = locOptions.Value.SupportedCultures.Select(k =>
+    new SelectListItem { Value = k.Name, Text = k.Name }).ToList();
+    var url = string.IsNullOrWhiteSpace(Context.Request.Path) ? "/" : $"{ Context.Request.Path.Value}{Context.Request.QueryString}";
+}
+
+<div>
+    <form id="cultureForm" asp-action="CultureManagment" asp-controller="Home" method="post" asp-route-url="@url">
+        <label>@localizer["Language"]</label>
+        <select name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList"
+                onchange="this.form.submit();"></select>
+
+    </form>
+
+    <script>
+        function SetCulture(selectedValue) {
+            var culture = "/?culture-" + selectedValue + "&ui-culture-" + selectedValue;
+            alert(culture);
+            document.getElementById("cultureForm").action = culture;
+            document.getElementById("cultureForm").submit();
+        }
+    </script>
+</div>

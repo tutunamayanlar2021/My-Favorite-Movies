@@ -1,0 +1,12 @@
+﻿@model List<Tur>
+
+
+<div class="list-group">
+    <a href="/movies/list" class="list-group-item list-group-item-action @(ViewBag.SelectedTur==null?"active":"")">@localizer["Tüm Filmler"]</a>
+    @foreach (var tur in Model)
+    {
+        <a href="/movies/list/@tur.TurId" class="list-group-item list-group-item-action @(ViewBag.SelectedTur==tur.TurId.ToString()?"active":"")">
+    @localizer[tur.Name] 
+        </a>
+    }
+</div>
